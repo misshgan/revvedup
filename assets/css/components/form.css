@@ -1,0 +1,136 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.6rem;
+
+    .button {
+        min-width: 100%;
+        justify-content: center;
+        margin-top: 3.2rem;
+        cursor: pointer;
+    }
+
+    label {
+        position: relative;
+        width: calc(50% - .8rem);
+    }
+
+    label span {
+        position: absolute;
+        opacity: 0;
+        z-index: -10;
+    }
+
+    label input {
+        width: 100%;
+
+        outline: none;
+        border-radius: 1rem;
+        border: 1px solid var(--color-black);
+        background: var(--color-grey);
+        box-shadow: 3px 3px 0px 0px var(--color-blue);
+
+        padding: 1.4rem 2rem;
+    }
+
+    label input::placeholder,
+    label input {
+        font-family: var(--font-sans-serif-main);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    label input::placeholder {
+        color: rgba(44, 39, 39, 0.38);
+    }
+
+    &__notifications {
+        position: absolute;
+        top: calc(100% + 2rem);
+        max-width: 62.8rem;
+        width: 100%;
+        text-align: center;
+
+        text-align: center;
+        margin: 0 auto;
+
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 150%;
+
+        display: none;
+        visibility: hidden;
+
+        transition: all .4s;
+    }
+    
+    &__bottom {
+        width: 100%;
+    }
+
+    &.error &__notifications,
+    &.success &__notifications,
+    &.loading &__notifications {
+        display: block;
+        visibility: visible;
+        animation: formMessageAppear .3s ease-out;
+    }
+
+    &.error &__message.error,
+    &.success &__message.success,
+    &.loading &__message.loading {
+        display: flex;
+        visibility: visible;
+        justify-content: center;
+    }
+
+    &__message.success {
+        color: var(--color-success);
+        display: none;
+        visibility: hidden;
+    }
+
+    &__message.error {
+        color: var(--color-error);
+        display: none;
+        visibility: hidden;
+    }
+
+    &__message.loading {
+        color: inherit;
+        display: none;
+        visibility: hidden;
+
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+}
+
+.form.form--short {
+    row-gap: 2.4rem;
+    position: relative;
+
+    label {
+        width: 100%;
+    }
+
+    button {
+        width: max-content;
+        min-width: unset;
+        margin-top: 0;
+    }
+}
+
+@keyframes formMessageAppear {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
