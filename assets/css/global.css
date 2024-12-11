@@ -15,17 +15,25 @@ html {
 body {
     min-height: 100vh;
     margin: 0;
-    padding: 0;
-    color: #464646;
-    font-family: var(--font-sans-serif);
-    font-size: 1.5rem;
-    line-height: 1.6em;
+    padding: 1.6rem 0 0;
+    color: var(--color-black);
+    font-family: var(--font-sans-serif-main);
+    font-size: 1.8rem;
+    line-height: normal;
     font-weight: 400;
     font-style: normal;
-    background: #fff;
+    background: var(--color-grey);
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5.55vw;
+    box-sizing: content-box;
 }
 
 
@@ -116,10 +124,6 @@ sub {
     bottom: -0.25em;
 }
 
-ul:not([class]) li + li {
-    margin-top: 0.6em;
-}
-
 a:not([class]) {
     color: var(--color-primary);
     text-decoration-skip-ink: auto;
@@ -142,48 +146,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    line-height: 1.15em;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 4.6rem;
-    letter-spacing: -0.5px;
-}
-@media (max-width: 500px) {
-    h1 {
-        font-size: 2.7rem;
-    }
-}
-
-h2 {
-    font-size: 3.6rem;
-}
-@media (max-width: 500px) {
-    h2 {
-        font-size: 2.2rem;
-    }
-}
-
-h3 {
-    font-size: 3.2rem;
-}
-@media (max-width: 500px) {
-    h3 {
-        font-size: 1.8rem;
-    }
-}
-
-h4 {
-    font-size: 2.6rem;
-}
-
-h5 {
-    font-size: 2.4rem;
-}
-
-h6 {
-    font-size: 2.2rem;
+    font-family: var(--font-sans-serif-second)
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
