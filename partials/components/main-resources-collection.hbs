@@ -1,0 +1,27 @@
+<section class="resources js-resources">
+    <div class="wrapper">
+        <h2 class="resources__title">Latest resources</h2>
+        <div class="resources__filter">
+            <button class="button active" data-category="all">All</button>
+            <button class="button" data-category="blog">Blog</button>
+            <button class="button" data-category="news">News</button>
+        </div>
+        <div class="resources__cards">
+            {{!-- {{#get 'posts' limit='6' include='authors'}}
+                {{#foreach posts}}
+                    {{> components/card default='true'}}
+                {{/foreach}}
+            {{/get}} --}}
+        </div>
+        <div class="resources__pagination">
+            <button class="resources-prev">{{> icons/site/arrow-round-left}}</button>
+            <div class="resources__pagination-numbers">
+                <button class="active">1</button>
+                <button>2</button>
+                <span>...</span>
+                <button>3</button>
+            </div>
+            <button class="resources-next">{{> icons/site/arrow-round-right}}</button>
+        </div>
+    </div>
+</section>
