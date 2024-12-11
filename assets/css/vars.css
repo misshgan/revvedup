@@ -11,8 +11,17 @@
     --color-success: #80b912;
     --color-error: #f05230;
 
+    --color-grey: #F1EBEB;
+    --color-black: #2C2727;
+    --color-green: #2C3933;
+    --color-blue: #B9D3F4;
+    --color-white: #fff;
+    --color-yellow: #FABD05;
+    --color-semi-transparent-white: #ffffff80;
+
     /* Fonts */
-    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-sans-serif-main: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-sans-serif-second: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
     --font-light: 100;
