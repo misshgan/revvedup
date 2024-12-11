@@ -1,0 +1,22 @@
+<form data-members-form class="form {{#if short}}form--short{{/if}}">
+    {{^if short}}
+        <label>
+            <span>Name</span>
+            <input placeholder="Your first name" type="text" data-members-name>
+        </label>
+    {{/if}}
+    <label>
+        <span>Email</span>
+        <input placeholder="{{#if short}}Email{{else}}Your email address{{/if}}" type="email" data-members-email required="true">
+    </label>
+
+    <div class="form__bottom">
+        <div class="form__notifications">
+            <p data-members-error class="form__message error"></p>
+            <p class="form__message success">Thank you for subscribing</p>
+            <p class="form__message loading">{{> icons/site/loading}} Loading ...</p>
+        </div>
+
+        <button class="button" type="submit">{{#if short}}Submit{{else}}Subscribe{{/if}} {{> icons/site/message}}</button>
+    </div>
+</form>
