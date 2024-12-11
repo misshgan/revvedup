@@ -1,0 +1,49 @@
+<article class="card {{classes}}{{#if default}} card--default{{/if}}">
+    {{#if feature_image}}
+        {{#if default}}
+            <a href="{{url}}">
+                {{> image pictureClass='card__image'}}
+            </a>
+        {{else}}
+            {{> image pictureClass='card__image'}}
+        {{/if}}
+    {{/if}}
+    <div class="card__main">
+        <div class="card__text">
+            <h3 class="card__title">
+                {{#if default}}
+                    <a href="{{url}}">{{title}}</a>
+                {{else}}
+                    {{title}}
+                {{/if}}
+            </h3>
+            {{#if default}}
+                <div class="card__meta">
+                    <time datetime="{{date published_at}}">{{date published_at format='D MMMM YYYY'}}</time>
+                </div>
+            {{/if}}
+            {{#if custom_excerpt}}
+                <p class="card__description">{{custom_excerpt}}</p>
+            {{/if}}
+            <div class="card__footer">
+                {{#primary_author}}
+                <div class="card__author">
+                    {{#if profile_image}}
+                        <img src="{{img_url profile_image size="xs"}}" alt="{{name}}">
+                        <span>{{name}}</span>
+                    {{/if}}
+                </div>
+                {{/primary_author}}
+                {{^if default}}
+                    <span style="line-height: 0;">{{> icons/site/bull}}</span>
+                    <div class="card__meta">
+                        <time datetime="{{date published_at}}">{{date published_at format='D MMMM YYYY'}}</time>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+        {{^if default}}
+            <a class="button" href="{{url}}">Read More</a>
+        {{/if}}
+    </div>
+</article>
