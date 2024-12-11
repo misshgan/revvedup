@@ -1,0 +1,52 @@
+.subscribe {
+    padding: clamp(5rem, 2.857rem + 3.571vw, 8rem) 0;
+
+    position: relative;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        max-width: 62.8rem;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        font-size: 4.8rem;
+        font-weight: 300;
+        line-height: 110%; /* 52.8px */
+    }
+    &__subtitle {
+        margin-top: 1.4rem;
+
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.333; /* 133.333% */
+    }
+
+    .form {
+        margin-top: 3.2rem;
+        width: 100%;
+    }
+
+    .arrow {
+        position: absolute;
+        left: 1rem;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    .sun {
+        position: absolute;
+        top: 3rem;
+        z-index: 0;
+        left: 80%;
+
+        width: clamp(2.6rem, 0.457rem + 3.571vw, 5.6rem);
+        height: auto;
+    }
+}
