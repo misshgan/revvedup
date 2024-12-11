@@ -1,0 +1,18 @@
+<section class="featured">
+    <div class="wrapper">
+        <h1 class="main-title">Latest Resources</h1>
+        {{#get "posts" include='authors' filter='featured:true' limit='2'}}
+           {{#if posts}}
+            <div class="featured__cards">
+                 {{#foreach posts}}
+                    {{#match @index "=" 0}}
+                        {{> components/card classes='card--big'}}
+                    {{else}}
+                        {{> components/card classes='card--medium'}}
+                    {{/match}}
+                {{/foreach}}
+            </div>
+           {{/if}}
+        {{/get}}
+    </div>
+</section>
